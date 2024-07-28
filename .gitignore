@@ -11,7 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
-src/main/java/org.example/store/
+src/main/**/store/
 
 ### Eclipse ###
 .apt_generated

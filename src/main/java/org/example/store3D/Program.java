@@ -21,14 +21,15 @@ public class Program {
         List<Polygon> polygons = new ArrayList<>();
         polygons.add(pol1);
 
-        PolygonalModel polygonalModel = new PolygonalModel("модель №5", polygons);
+        PolygonalModel polygonalModel1 = new PolygonalModel("модель №5", polygons);
         List<PolygonalModel> modelsList = new ArrayList<>();
-        modelsList.add(polygonalModel);
+        modelsList.add(polygonalModel1);
 
         Flash flash1 = new Flash(firstPoint, angle1, color1, 220);
         System.out.println("Flash id = " + flash1.getId());
         Camera camera1 = new Camera(thirdPoint, angle2);
         Scene scene1 = new Scene(modelsList,List.of(camera1));
+
         ModelStore store = new ModelStore(
                 modelsList,
                 List.of(flash1),
@@ -38,6 +39,7 @@ public class Program {
         Observer1 observer1 = new Observer1("Наблюдатель за полигональными моделями");
         store.RegisterModelChangerObserver(new Observer1("Наблюдатель за полигональными моделями"));
 //        store.add(polygonalModel);
+
         System.out.println(store);
     }
 }
